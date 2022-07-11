@@ -19,7 +19,7 @@ import com.example.model.response.MealResponse
 
 
 @Composable
-fun MealsCategoriesScreen(name: String) {
+fun MealsCategoriesScreen() {
     val viewModel: MealCategoriesViewModel = viewModel()
     val meals = viewModel.mealsState.value
 
@@ -62,6 +62,6 @@ fun MealCategory(meal: MealResponse) {
 @Composable
 fun DefaultPreview() {
     MealzAppTheme {
-        MealsCategoriesScreen("Android")
+        MealsCategoriesScreen()
     }
 }

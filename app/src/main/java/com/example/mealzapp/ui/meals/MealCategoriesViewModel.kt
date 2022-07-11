@@ -21,9 +21,6 @@ class MealCategoriesViewModel (private val repository: MealsRepository = MealsRe
     }
     val mealsState: MutableState<List<MealResponse>> = mutableStateOf(emptyList<MealResponse>())
 
-    override fun onCleared() {
-        super.onCleared()
-    }
     private suspend fun getMeals(): List<MealResponse> {
        return repository.getMeals().categories
     }
